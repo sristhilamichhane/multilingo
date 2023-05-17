@@ -1,9 +1,9 @@
 import "./App.css";
 // import Sidebar from "./Sidebar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Settings from "./components/Settings";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Settings from "./Pages/Settings";
 
 function App() {
   return (
