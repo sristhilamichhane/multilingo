@@ -183,7 +183,7 @@ export default function Navbar() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            Multilinguio
+            Multilingo
           </Typography>
           <Search>
             <SearchIconWrapper>
