@@ -1,23 +1,22 @@
-import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 
-import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
+import PlayLessonIcon from "@mui/icons-material/PlayLesson";
+import CastForEducationIcon from "@mui/icons-material/CastForEducation";
+import HomeIcon from "@mui/icons-material/Home";
 
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "../appStore";
 
@@ -114,7 +113,7 @@ export default function Sidebar() {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <HomeIcon />
               </ListItemIcon>
               <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
@@ -123,7 +122,7 @@ export default function Sidebar() {
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
-              navigate("/about");
+              navigate("/learnlesson");
             }}
           >
             <ListItemButton
@@ -140,16 +139,16 @@ export default function Sidebar() {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <PlayLessonIcon />
               </ListItemIcon>
-              <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Lessons" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
           <ListItem
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
-              navigate("/settings");
+              navigate("/practice");
             }}
           >
             <ListItemButton
@@ -166,9 +165,9 @@ export default function Sidebar() {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <CastForEducationIcon />
               </ListItemIcon>
-              <ListItemText primary="Settings" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Practice" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
         </List>
