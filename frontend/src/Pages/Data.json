@@ -1,0 +1,14 @@
+{
+    "english":{
+        "Title":"Select your proficient language",
+        "Description":"You have selected English"
+    },
+    "nepali":{
+        "Title":"आफ्नो कुशल भाषा चयन गर्नुहोस्",
+        "Description":"नेपाली छनोट गर्नुभयो"
+    },
+    "maithili":{
+        "Title":"अपन प्रवीण भाषा चुनू",
+        "Description":"अहाँ मैथिली चुनने छी"
+    }
+}
