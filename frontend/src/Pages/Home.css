@@ -1,0 +1,28 @@
+.paddingAll{
+    padding: 10px 10px 10px 10px;
+}
+.scoreTitle{
+    font-weight: 600;
+}
+.scoreSubTitle{
+    font-size:14px;
+  color: white;
+}
+.iconStyle{
+    margin-top:20px;
+    margin-left: 20px;
+    color: white;
+}
+.gradient{
+    background:rgb(40,34,70);
+    background:linear-gradient(158deg,rgb(192, 190, 204) 0%,rgba(30,47,141,1) 100%)
+}
+.gradientLight{
+    background:rgb(53,138,148);
+    background:linear-gradient(158deg,rgb(193, 198, 169) 0%,rgb(86, 109, 237) 100%)
+}
+.bgColor{
+    min-height: 100vh;
+    background: #ECEFF1;
+    background:linear-gradient(158deg,rgb(224,224, 224) 0%,rrgb(233,237,254) 100%)
+}

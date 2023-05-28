@@ -9,6 +9,11 @@ import {
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import Grid from "@mui/material/Grid";
+import "./Home.css";
+import GradeIcon from "@mui/icons-material/Grade";
+import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
+import AccordionHome from "../components/AccordianHome";
+import WelcomePage from "../components/WelcomePage";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -21,68 +26,101 @@ const MainContent = styled(Box)(({ theme }) => ({
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Box height={70} />
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
-        <MainContent>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={8}>
-              <Stack spacing={2} direction="row">
-                <Card sx={{ width: "100%", height: 140 }}>
+      <div className="bgColor">
+        <Navbar />
+        <Box height={70} />
+        <Box sx={{ display: "flex" }}>
+          <Sidebar />
+          <MainContent>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={8}>
+                <Stack spacing={2} direction="row">
+                  <Card
+                    sx={{ width: "100%", height: 185 }}
+                    className="gradient"
+                  >
+                    <CardContent>
+                      <div>
+                        <LocalLibraryIcon />
+                      </div>
+                      <Typography gutterBottom variant="h5" component="div">
+                        पाठ
+                      </Typography>
+                      <Typography variant="body2" color="white" component="div">
+                        पहिले सिक्नुहोस् त्यसपछि अभ्यास गर्नुहोस्
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                  <Card
+                    sx={{ width: "100%", height: 185 }}
+                    className="gradientLight"
+                  >
+                    <CardContent>
+                      <div>
+                        <LocalLibraryIcon />
+                      </div>
+                      <Typography gutterBottom variant="h5" component="div">
+                        Lesson
+                      </Typography>
+                      <Typography variant="body2" color="white">
+                        learn first and practice accordingly
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Stack>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ width: "100%" }} className="gradientLight">
+                  <Typography gutterBottom variant="h5" component="div">
+                    <Stack spacing={2} direction="row">
+                      <div className="iconStyle">
+                        <GradeIcon />
+                      </div>
+                      <div className="paddingAll">
+                        <span className="scoreTitle"> २५०</span>
+                        <br />
+                        <span className="scoreSubTitle">अहिलेसम्मको नतिजा</span>
+                      </div>
+                    </Stack>
+                  </Typography>
+                </Card>
+
+                <Card sx={{ width: "100%" }} className="gradient">
+                  <Typography gutterBottom variant="h5" component="div">
+                    <Stack spacing={2} direction="row">
+                      <div className="iconStyle">
+                        <GradeIcon />
+                      </div>
+                      <div className="paddingAll">
+                        <span className="scoreTitle"> 250</span>
+                        <br />
+                        <span className="scoreSubTitle">Results Till Now</span>
+                      </div>
+                    </Stack>
+                  </Typography>
+                </Card>
+              </Grid>
+            </Grid>
+            <Box height={20} />
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={8}>
+                <Card sx={{ height: "60vh" }}>
+                  <CardContent>{/* <WelcomePage /> */}</CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Card sx={{ height: "60vh" }}>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      पाठ
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      पहिले सिक्नुहोस् त्यसपछि अभ्यास गर्नुहोस्
-                    </Typography>
+                    <Typography variant="h4">Guidence here:</Typography>
+                    <br />
+                    <AccordionHome />
                   </CardContent>
                 </Card>
-                <Card sx={{ width: "100%", height: 140 }}>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lesson
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      learn first and practice accordingly
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Stack>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <Card sx={{ width: "100%" }}>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    अहिलेसम्मको नतिजा २५०
-                  </Typography>
-                </CardContent>
-              </Card>
-              <Card sx={{ width: "100%" }}>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Results till now 250
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-          <Box height={20} />
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={8}>
-              <Card sx={{ height: "60vh" }}>
-                <CardContent></CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Card sx={{ height: "60vh" }}>
-                <CardContent></CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-        </MainContent>
-      </Box>
+          </MainContent>
+        </Box>
+      </div>
     </>
   );
 };
