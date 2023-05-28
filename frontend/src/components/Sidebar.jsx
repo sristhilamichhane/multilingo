@@ -7,10 +7,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import PlayLessonIcon from "@mui/icons-material/PlayLesson";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import HomeIcon from "@mui/icons-material/Home";
-
+import NoteAddIcon from "@mui/icons-material/NoteAdd";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-
+import QuizIcon from "@mui/icons-material/Quiz";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
@@ -168,6 +168,61 @@ export default function Sidebar() {
                 <CastForEducationIcon />
               </ListItemIcon>
               <ListItemText primary="Practice" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem
+            disablePadding
+            sx={{ display: "block" }}
+            onClick={() => {
+              navigate("/quiz");
+            }}
+          >
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <QuizIcon />
+              </ListItemIcon>
+              <ListItemText primary="Quiz" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem
+            disablePadding
+            sx={{ display: "block" }}
+            onClick={() => {
+              navigate("/admin");
+            }}
+          >
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <NoteAddIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary="Add Questions"
+                sx={{ opacity: open ? 1 : 0 }}
+              />
             </ListItemButton>
           </ListItem>
         </List>
