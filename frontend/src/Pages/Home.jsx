@@ -104,14 +104,27 @@ const Home = () => {
             <Box height={20} />
             <Grid container spacing={2}>
               <Grid item xs={12} md={8}>
-                <Card sx={{ height: "60vh" }}>
-                  <CardContent>{/* <WelcomePage /> */}</CardContent>
+                <Card sx={{ height: "60vh" }} className="gradientLight">
+                  <CardContent align="center">
+                    <WelcomePage />
+                  </CardContent>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: "0px",
+                    }}
+                    variant="h6"
+                  >
+                    अनेकता मा एकता
+                  </Typography>
                 </Card>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Card sx={{ height: "60vh" }}>
+                <Card sx={{ height: "60vh" }} className="gradient">
                   <CardContent>
-                    <Typography variant="h4">Guidence here:</Typography>
+                    <Typography variant="h4">Guidance here:</Typography>
                     <br />
                     <AccordionHome />
                   </CardContent>
