@@ -14,6 +14,7 @@ import GradeIcon from "@mui/icons-material/Grade";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import AccordionHome from "../components/AccordianHome";
 import WelcomePage from "../components/WelcomePage";
+import ComboBox from "../components/Combobox";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -36,7 +37,7 @@ const Home = () => {
               <Grid item xs={12} md={8}>
                 <Stack spacing={2} direction="row">
                   <Card
-                    sx={{ width: "100%", height: 185 }}
+                    sx={{ width: "100%", height: 205 }}
                     className="gradient"
                   >
                     <CardContent>
@@ -52,7 +53,7 @@ const Home = () => {
                     </CardContent>
                   </Card>
                   <Card
-                    sx={{ width: "100%", height: 185 }}
+                    sx={{ width: "100%", height: 205 }}
                     className="gradientLight"
                   >
                     <CardContent>
@@ -70,16 +71,22 @@ const Home = () => {
                 </Stack>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Card sx={{ width: "100%" }} className="gradientLight">
+                <Card
+                  sx={{ width: "100%", height: "50%" }}
+                  className="gradientLight"
+                >
                   <Typography gutterBottom variant="h5" component="div">
                     <Stack spacing={2} direction="row">
                       <div className="iconStyle">
                         <GradeIcon />
                       </div>
                       <div className="paddingAll">
-                        <span className="scoreTitle"> २५०</span>
-                        <br />
-                        <span className="scoreSubTitle">अहिलेसम्मको नतिजा</span>
+                        <span className="scoreTitle">
+                          <ComboBox />
+                        </span>
+                        <span className="scoreSubTitle">
+                          तपाईलाई थाहा भएको भाषा चयन गर्नुहोस्
+                        </span>
                       </div>
                     </Stack>
                   </Typography>
@@ -92,9 +99,12 @@ const Home = () => {
                         <GradeIcon />
                       </div>
                       <div className="paddingAll">
-                        <span className="scoreTitle"> 250</span>
-                        <br />
-                        <span className="scoreSubTitle">Results Till Now</span>
+                        <span className="scoreTitle">
+                          <ComboBox />{" "}
+                        </span>
+                        <span className="scoreSubTitle">
+                          तपाईंले सिक्न चाहेको भाषा छान्नुहोस्
+                        </span>
                       </div>
                     </Stack>
                   </Typography>
@@ -104,25 +114,14 @@ const Home = () => {
             <Box height={20} />
             <Grid container spacing={2}>
               <Grid item xs={12} md={8}>
-                <Card sx={{ height: "60vh" }} className="gradientLight">
+                <Card sx={{ height: "55vh" }} className="gradientLight">
                   <CardContent align="center">
                     <WelcomePage />
                   </CardContent>
-                  <Typography
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      padding: "0px",
-                    }}
-                    variant="h6"
-                  >
-                    अनेकता मा एकता
-                  </Typography>
                 </Card>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Card sx={{ height: "60vh" }} className="gradient">
+                <Card sx={{ height: "55vh" }} className="gradient">
                   <CardContent>
                     <Typography variant="h4">Guidance here:</Typography>
                     <br />
