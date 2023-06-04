@@ -4,7 +4,7 @@ import "../Pages/Home.css";
 import { Stack } from "@mui/material";
 
 export default function ComboBox() {
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState("nepali");
   const [content, setContent] = useState({});
 
   useEffect(() => {
