@@ -20,6 +20,8 @@
     "react-router-dom": "^6.11.1",
     "react-speech-recognition": "^3.10.0",
     "react-swipeable-views": "^0.14.0",
+    "regenerator-runtime": "^0.13.11",
+    "string-similarity": "^4.0.4",
     "zustand": "^4.3.8"
   },
   "devDependencies": {
