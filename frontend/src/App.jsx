@@ -1,5 +1,6 @@
 import "./App.css";
 // import Sidebar from "./Sidebar";
+import "regenerator-runtime/runtime";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Practice from "./Pages/Practice";
