@@ -87,6 +87,7 @@ const Quiz = () => {
                           justifyContent: "center",
                           alignItems: "center",
                         }}
+                        fontWeight="bold"
                       >
                         {QuizData[currentQuestion].question}
                       </Typography>
