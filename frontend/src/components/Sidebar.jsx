@@ -13,6 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import QuizIcon from "@mui/icons-material/Quiz";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import LeaderboardIcon from "@mui/icons-material/Leaderboard";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -221,6 +222,35 @@ export default function Sidebar() {
               </ListItemIcon>
               <ListItemText
                 primary="Add Questions"
+                sx={{ opacity: open ? 1 : 0 }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <ListItem
+            disablePadding
+            sx={{ display: "block" }}
+            onClick={() => {
+              navigate("/leaderboard");
+            }}
+          >
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <LeaderboardIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary="Leaderboard"
                 sx={{ opacity: open ? 1 : 0 }}
               />
             </ListItemButton>

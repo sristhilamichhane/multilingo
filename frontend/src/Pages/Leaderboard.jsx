@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
 import { Box, styled } from "@mui/material";
 import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -10,7 +10,7 @@ const MainContent = styled(Box)(({ theme }) => ({
   },
 }));
 
-const AddQuestion = () => {
+const Leaderboard = () => {
   return (
     <>
       <div className="bgColor">
@@ -27,4 +27,4 @@ const AddQuestion = () => {
   );
 };
 
-export default AddQuestion;
+export default Leaderboard;
