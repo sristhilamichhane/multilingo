@@ -10,6 +10,7 @@ import AddQuestion from "./Pages/AddQuestion";
 import BasicLesson from "./components/Lessons/BasicLesson";
 import AdvanceLesson from "./components/Lessons/AdvanceLesson";
 import IntermediateLesson from "./components/Lessons/IntermediateLesson";
+import Leaderboard from "./Pages/Leaderboard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/practice" element={<Practice />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/admin" element={<AddQuestion />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
 
         {/* routing learnLesson */}
         <Route path="/basicLesson" element={<BasicLesson />} />
