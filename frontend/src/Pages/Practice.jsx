@@ -13,7 +13,7 @@ import { styled } from "@mui/system";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import "./Home.css";
+// import "./Home.css";
 import { useState } from "react";
 import { compareTwoStrings } from "string-similarity";
 
@@ -21,7 +21,7 @@ const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
   padding: theme.spacing(3),
   [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
   },
 }));
 
@@ -70,9 +70,14 @@ const Practice = () => {
               >
                 For basic lesson lets do some practice:
               </Typography>
-              <Grid container spacing={5}>
+              <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                  <Card sx={{ width: "100%", height: "60vh" }}>
+                  <Card
+                    sx={{
+                      width: "100%",
+                      height: { xs: "70vh", sm: "75vh", md: "60vh" },
+                    }}
+                  >
                     <CardContent>
                       <Typography sx={{ p: 1 }}>{givenSentence}</Typography>
                       <hr />
