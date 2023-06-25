@@ -1,9 +1,17 @@
-import { useState } from "react";
-import { Box, Card, Typography, styled, Button } from "@mui/material";
-import Navbar from "../components/Navbar";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Grid,
+  Typography,
+  styled,
+} from "@mui/material";
 import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import "./Home.css";
-import QuizData from "./QuizData";
+import { useNavigate } from "react-router-dom";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -14,36 +22,7 @@ const MainContent = styled(Box)(({ theme }) => ({
 }));
 
 const Quiz = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
-  const [clickedOption, setClickedOption] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-
-  const changeQuestion = () => {
-    updateScore();
-    if (currentQuestion < QuizData.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-      setClickedOption(0);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  const updateScore = () => {
-    const selectedOption = clickedOption;
-    const correctAnswer = QuizData[currentQuestion].answer;
-
-    if (selectedOption === correctAnswer) {
-      setScore(score + 1);
-    }
-  };
-
-  const resetAll = () => {
-    setShowResult(false);
-    setCurrentQuestion(0);
-    setClickedOption(0);
-    setScore(0);
-  };
+  const navigate = useNavigate();
 
   return (
     <>
@@ -53,99 +32,153 @@ const Quiz = () => {
         <Box sx={{ display: "flex" }}>
           <Sidebar />
           <MainContent>
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-              <Card sx={{ width: "100%", height: "80vh" }}>
-                {showResult ? (
-                  <Box
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                    justifyContent="center"
-                    height="100%"
+            <Box component="main" sx={{ flexGrow: 1, pt: 5 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={4}>
+                  <Card
+                    sx={{ width: "100%", height: 30 + "vh" }}
+                    className="gradient"
                   >
-                    <Typography variant="h4" gutterBottom>
-                      Your Score: {score}
-                    </Typography>
-                    <Typography variant="h6" gutterBottom>
-                      Total Score: {QuizData.length}
-                    </Typography>
-                    <Button variant="contained" onClick={resetAll}>
-                      Try Again
-                    </Button>
-                  </Box>
-                ) : (
-                  <>
-                    <Box p={2}>
-                      <Typography variant="h6" gutterBottom>
-                        Question {currentQuestion + 1}:
-                      </Typography>
+                    <CardContent>
                       <Typography
-                        variant="body1"
                         gutterBottom
+                        variant="h5"
+                        component="div"
                         sx={{
+                          fontWeight: 700, // Custom font weight
+                          fontSize: "24px", // Custom font size
+                          color: "black", // Custom text color
+                          marginBottom: "16px",
                           display: "flex",
-                          justifyContent: "center",
                           alignItems: "center",
+                          justifyContent: "center",
                         }}
-                        fontWeight="bold"
                       >
-                        {QuizData[currentQuestion].question}
+                        Basics
                       </Typography>
-                    </Box>
-                    <Box
-                      p={2}
-                      display="flex"
-                      justifyContent="center"
-                      flexDirection="column"
-                      alignItems="center"
-                    >
-                      {QuizData[currentQuestion].options.map(
-                        (option, index) => (
-                          <Box key={index} sx={{ m: 1, width: "100%" }}>
-                            {option.type === "text" && (
-                              <>
-                                {option.value.map((value, i) => (
-                                  <Button
-                                    key={i}
-                                    variant={
-                                      clickedOption === i + 1
-                                        ? "contained"
-                                        : "outlined"
-                                    }
-                                    color="primary"
-                                    onClick={() => setClickedOption(i + 1)}
-                                    sx={{ m: 1, width: "100%" }}
-                                  >
-                                    {value}
-                                  </Button>
-                                ))}
-                              </>
-                            )}
-                            {option.type === "audio" && (
-                              <audio controls>
-                                <source src={option.value} type="audio/mpeg" />
-                              </audio>
-                            )}
-                            {option.type === "image" && (
-                              <img
-                                src={option.value}
-                                alt="Option"
-                                style={{ width: "100%" }}
-                              />
-                            )}
-                          </Box>
-                        )
-                      )}
-                    </Box>
 
-                    <Box p={2} display="flex" justifyContent="center">
-                      <Button variant="contained" onClick={changeQuestion}>
-                        Next
+                      <Typography variant="body2">
+                        Welcome to the fundamental quiz repository, your go-to
+                        resource for mastering the essentials of your chosen
+                        language.
+                      </Typography>
+                    </CardContent>
+                    <CardActions
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="primary"
+                        onClick={() => {
+                          navigate("/basicQuiz");
+                        }}
+                      >
+                        Start
                       </Button>
-                    </Box>
-                  </>
-                )}
-              </Card>
+                    </CardActions>
+                  </Card>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <Card
+                    sx={{ width: "100%", height: 30 + "vh" }}
+                    className="gradientLight"
+                  >
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
+                        sx={{
+                          fontWeight: 700, // Custom font weight
+                          fontSize: "24px", // Custom font size
+                          color: "black", // Custom text color
+                          marginBottom: "16px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Intermediate
+                      </Typography>
+                      <Typography variant="body2">
+                        Welcome to the intermediate quiz collection, the perfect
+                        resource to advance your skills in your chosen language.
+                      </Typography>
+                    </CardContent>
+                    <CardActions
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="primary"
+                        onClick={() => {
+                          navigate("/intermediateQuiz");
+                        }}
+                      >
+                        Start
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <Card
+                    sx={{ width: "100%", height: 30 + "vh" }}
+                    className="gradient"
+                  >
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
+                        sx={{
+                          fontWeight: 700, // Custom font weight
+                          fontSize: "24px", // Custom font size
+                          color: "black", // Custom text color
+                          marginBottom: "16px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Advance
+                      </Typography>
+                      <Typography variant="body2">
+                        Welcome to the advanced quiz compilation, the ultimate
+                        resource to elevate your mastery of your chosen language
+                        to the highest level.
+                      </Typography>
+                    </CardContent>
+                    <CardActions
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="primary"
+                        onClick={() => {
+                          navigate("/advanceQuiz");
+                        }}
+                      >
+                        Start
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+              </Grid>
             </Box>
           </MainContent>
         </Box>
