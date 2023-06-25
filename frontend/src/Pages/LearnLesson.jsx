@@ -37,7 +37,7 @@ const LearnLesson = () => {
                 <Grid item xs={12} md={4}>
                   <Card
                     sx={{ width: "100%", height: 30 + "vh" }}
-                    className="gradientLight"
+                    className="gradient"
                   >
                     <CardContent>
                       <Typography
@@ -57,7 +57,7 @@ const LearnLesson = () => {
                         Basics
                       </Typography>
 
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2">
                         Welcome to the fundamental lesson repository, your go-to
                         resource for mastering the essentials of your chosen
                         language.
@@ -105,7 +105,7 @@ const LearnLesson = () => {
                       >
                         Intermediate
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2">
                         Welcome to the intermediate lesson collection, the
                         perfect resource to advance your skills in your chosen
                         language.
@@ -134,7 +134,7 @@ const LearnLesson = () => {
                 <Grid item xs={12} md={4}>
                   <Card
                     sx={{ width: "100%", height: 30 + "vh" }}
-                    className="gradientLight"
+                    className="gradient"
                   >
                     <CardContent>
                       <Typography
@@ -153,7 +153,7 @@ const LearnLesson = () => {
                       >
                         Advance
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2">
                         Welcome to the advanced lesson compilation, the ultimate
                         resource to elevate your mastery of your chosen language
                         to the highest level.

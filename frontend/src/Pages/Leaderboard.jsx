@@ -58,7 +58,7 @@ const Leaderboard = () => {
                 >
                   <Card
                     sx={{ width: "100%", height: "30%" }}
-                    className="gradientLight"
+                    className="gradient"
                   >
                     <Stack direction="row" gap={3} p={1}>
                       <Typography

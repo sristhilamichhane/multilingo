@@ -11,6 +11,12 @@ import BasicLesson from "./components/Lessons/BasicLesson";
 import AdvanceLesson from "./components/Lessons/AdvanceLesson";
 import IntermediateLesson from "./components/Lessons/IntermediateLesson";
 import Leaderboard from "./Pages/Leaderboard";
+import BasicPractice from "./components/Practice/BasicPractice";
+import AdvancePractice from "./components/Practice/AdvancePractice";
+import IntermediatePractice from "./components/Practice/IntermediatePractice";
+import BasicQuiz from "./components/Quiz/BasicQuiz";
+import AdvanceQuiz from "./components/Quiz/AdvanceQuiz";
+import IntermediateQuiz from "./components/Quiz/IntermediateQuiz";
 
 function App() {
   return (
@@ -28,6 +34,17 @@ function App() {
         <Route path="/basicLesson" element={<BasicLesson />} />
         <Route path="/advanceLesson" element={<AdvanceLesson />} />
         <Route path="/intermediateLesson" element={<IntermediateLesson />} />
+        {/* routing Practice*/}
+        <Route path="/basicPractice" element={<BasicPractice />} />
+        <Route path="/advancePractice" element={<AdvancePractice />} />
+        <Route
+          path="/intermediatePractice"
+          element={<IntermediatePractice />}
+        />
+        {/* routing Quiz*/}
+        <Route path="/basicQuiz" element={<BasicQuiz />} />
+        <Route path="/advanceQuiz" element={<AdvanceQuiz />} />
+        <Route path="/intermediateQuiz" element={<IntermediateQuiz />} />
       </Routes>
     </BrowserRouter>
   );

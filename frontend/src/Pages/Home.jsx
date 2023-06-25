@@ -47,7 +47,11 @@ const Home = () => {
                       <Typography gutterBottom variant="h5" component="div">
                         पाठ
                       </Typography>
-                      <Typography variant="body2" color="white" component="div">
+                      <Typography
+                        variant="subtitle1"
+                        component="div"
+                        sx={{ fontWeight: "bold" }}
+                      >
                         पहिले सिक्नुहोस् त्यसपछि अभ्यास गर्नुहोस्
                       </Typography>
                     </CardContent>
@@ -63,7 +67,11 @@ const Home = () => {
                       <Typography gutterBottom variant="h5" component="div">
                         Lesson
                       </Typography>
-                      <Typography variant="body2" color="white">
+                      <Typography
+                        variant="subtitle1"
+                        component="div"
+                        sx={{ fontWeight: "bold" }}
+                      >
                         learn first and practice accordingly
                       </Typography>
                     </CardContent>
