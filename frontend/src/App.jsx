@@ -17,6 +17,9 @@ import IntermediatePractice from "./components/Practice/IntermediatePractice";
 import BasicQuiz from "./components/Quiz/BasicQuiz";
 import AdvanceQuiz from "./components/Quiz/AdvanceQuiz";
 import IntermediateQuiz from "./components/Quiz/IntermediateQuiz";
+import UserManagement from "./Pages/UserManagement";
+import Login from "./components/SignUpLogin/Login";
+import SignUp from "./components/SignUpLogin/SignUp";
 
 function App() {
   return (
@@ -27,8 +30,10 @@ function App() {
         <Route path="/learnlesson" element={<LearnLesson />} />
         <Route path="/practice" element={<Practice />} />
         <Route path="/quiz" element={<Quiz />} />
-        <Route path="/admin" element={<AddQuestion />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+        {/* Adim Access */}
+        <Route path="/admin" element={<AddQuestion />} />
+        <Route path="/admin2" element={<UserManagement />} />
 
         {/* routing learnLesson */}
         <Route path="/basicLesson" element={<BasicLesson />} />
@@ -45,6 +50,10 @@ function App() {
         <Route path="/basicQuiz" element={<BasicQuiz />} />
         <Route path="/advanceQuiz" element={<AdvanceQuiz />} />
         <Route path="/intermediateQuiz" element={<IntermediateQuiz />} />
+
+        {/* Routing Login  */}
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signUP" element={<SignUp />}></Route>
       </Routes>
     </BrowserRouter>
   );
