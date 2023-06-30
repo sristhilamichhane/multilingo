@@ -1,9 +1,18 @@
 import { useState } from "react";
-import { Box, Card, Typography, styled, Button } from "@mui/material";
+import {
+  Box,
+  Card,
+  Typography,
+  styled,
+  Button,
+  CardContent,
+  CardActions,
+} from "@mui/material";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
 // import "./Home.css";
 import QuizData from "./QuizData";
+import { useNavigate } from "react-router-dom";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -14,6 +23,7 @@ const MainContent = styled(Box)(({ theme }) => ({
 }));
 
 const IntermediateQuiz = () => {
+  const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState(0);
@@ -145,6 +155,45 @@ const IntermediateQuiz = () => {
                     </Box>
                   </>
                 )}
+              </Card>
+              <Card sx={{ width: "100%" }} className="gradientLight">
+                <CardContent>
+                  <CardActions
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => {
+                        navigate("/basicQuiz");
+                      }}
+                    >
+                      Back To Basic Quiz
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      onClick={() => {
+                        navigate("/intermediateLesson");
+                      }}
+                    >
+                      Revise intermediate lesson again
+                    </Button>
+
+                    <Button
+                      variant="contained"
+                      onClick={() => {
+                        navigate("/advanceQuiz");
+                      }}
+                    >
+                      Next Advance Quiz
+                    </Button>
+                  </CardActions>
+                </CardContent>
               </Card>
             </Box>
           </MainContent>

@@ -16,6 +16,7 @@ import SpeechRecognition, {
 // import "./Home.css";
 import { useState } from "react";
 import { compareTwoStrings } from "string-similarity";
+import { useNavigate } from "react-router-dom";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -26,6 +27,7 @@ const MainContent = styled(Box)(({ theme }) => ({
 }));
 
 const AdvancePractice = () => {
+  const navigate = useNavigate();
   const givenSentence = ` मेरो नाम राजा हो म नेपाल बाट हुन् र म नेपाली भाषा
   बोल्छु मलाई नेपाली भाषा पढ्न र लेख्नन मन पर्छ मेरो
   परिवारमा मेरो बाबु आमा र दाजु भाइ छन् मैले उच्च
@@ -119,6 +121,15 @@ const AdvancePractice = () => {
                           justifyContent: "center",
                         }}
                       >
+                        <Button
+                          variant="contained"
+                          color="secondary"
+                          onClick={() => {
+                            navigate("/advanceLesson");
+                          }}
+                        >
+                          Revise Advance lesson again
+                        </Button>
                         <Button
                           variant="contained"
                           color="primary"
