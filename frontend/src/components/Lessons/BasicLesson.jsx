@@ -3,11 +3,21 @@ import {
   Button,
   Card,
   CardContent,
-  Grid,
+  CardActions,
+  // Grid,
+  IconButton,
+  Paper,
   Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
   Typography,
   styled,
 } from "@mui/material";
+import { VolumeUp } from "@mui/icons-material";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
 import { useNavigate } from "react-router-dom";
@@ -23,65 +33,46 @@ const MainContent = styled(Box)(({ theme }) => ({
 const BasicLesson = () => {
   const lessons = [
     {
-      title: "Section 1",
-      english: "Hello",
-      nepali: "नमस्ते (Namaste)",
+      title: "Greetings",
+      words: [
+        { english: "Hello", nepali: "नमस्ते (Namaste)" },
+        { english: "Thank you", nepali: "धन्यवाद (Dhanyabad)" },
+        { english: "Goodbye", nepali: "बिदाई (Bidai)" },
+      ],
     },
     {
-      title: "Section 2",
-      english: "Thank you",
-      nepali: "धन्यवाद (Dhanyabad)",
+      title: "Basics",
+      words: [
+        { english: "Please", nepali: "कृपया (Kripaya)" },
+        { english: "Sorry", nepali: "माफ गर्नुहोस् (Maaf garnuhos)" },
+        { english: "Yes", nepali: "हो (Ho)" },
+        { english: "No", nepali: "होइन (Hoina)" },
+      ],
     },
     {
-      title: "Section 3",
-      english: "Goodbye",
-      nepali: "बिदाई (Bidai)",
-    },
-    // Add more lessons here
-    {
-      title: "Section 4",
-      english: "Please",
-      nepali: "कृपया (Kripaya)",
-    },
-    {
-      title: "Section 5",
-      english: "Sorry",
-      nepali: "माफ गर्नुहोस् (Maaf garnuhos)",
-    },
-    {
-      title: "Section 6",
-      english: "Yes",
-      nepali: "हो (Ho)",
+      title: "Introductions",
+      words: [
+        {
+          english: "How are you?",
+          nepali: "तपाईंलाई कस्तो छ? (Tapailai kasto cha?)",
+        },
+        { english: "I'm fine", nepali: "म ठिकाइ छु (Ma thikai chu)" },
+        {
+          english: "What is your name?",
+          nepali: "तपाईंको नाम के हो? (Tapainko naam ke ho?)",
+        },
+        {
+          english: "My name is...",
+          nepali: "मेरो नाम ... हो (Mero naam ... ho)",
+        },
+      ],
     },
     {
-      title: "Section 7",
-      english: "No",
-      nepali: "होइन (Hoina)",
-    },
-    {
-      title: "Section 8",
-      english: "How are you?",
-      nepali: "तपाईंलाई कस्तो छ? (Tapailai kasto cha?)",
-    },
-    {
-      title: "Section 9",
-      english: "I'm fine",
-      nepali: "म ठिकाइ छु (Ma thikai chu)",
-    },
-    {
-      title: "Section 10",
-      english: "What is your name?",
-      nepali: "तपाईंको नाम के हो? (Tapainko naam ke ho?)",
-    },
-    {
-      title: "Section 11",
-      english: "My name is...",
-      nepali: "मेरो नाम ... हो (Mero naam ... ho)",
-    },
-    {
-      title: "Section 12",
-      english: "Excuse me",
-      nepali: "क्षमा पर्नुहोस् (Kshama parnuhos)",
+      title: "Polite Phrases",
+      words: [
+        { english: "Excuse me", nepali: "क्षमा पर्नुहोस् (Kshama parnuhos)" },
+        // Add more words here
+      ],
     },
   ];
 
@@ -108,76 +99,121 @@ const BasicLesson = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  fontWeight: "bold", // Added bold font weight
                 }}
               >
                 Basic Section
               </Typography>
-              <Grid container spacing={2}>
-                {lessons.map((lesson, index) => (
-                  <Grid item xs={12} sm={6} md={4} key={index}>
-                    <Card sx={{ height: "38vh" }}>
-                      <CardContent>
-                        <Typography variant="h6" sx={{ mb: 2 }}>
-                          {lesson.title}
-                        </Typography>
-                        <Typography variant="body1">
-                          English: {lesson.english}
-                          <br />
-                          Nepali: {lesson.nepali}
-                        </Typography>
-                        <Stack direction="row" gap={2}>
-                          <Button
-                            variant="outlined"
-                            size="small"
-                            onClick={() => speakText(lesson.english)}
-                            sx={{ mt: 2 }}
-                          >
-                            Speak English
-                          </Button>
-                          <Button
-                            variant="outlined"
-                            size="small"
-                            onClick={() => speakText(lesson.nepali)}
-                            sx={{ mt: 2 }}
-                          >
-                            Speak Nepali
-                          </Button>
-                        </Stack>
-                      </CardContent>
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
-              <Stack
-                direction="row"
-                gap={4}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Button
-                  variant="outlined"
-                  size="small"
-                  onClick={() => {
-                    navigate("/learnlesson");
-                  }}
-                  sx={{ mt: 2 }}
-                >
-                  Back to Learn lesson
-                </Button>
-                <Button
-                  variant="outlined"
-                  size="small"
-                  onClick={() => {
-                    navigate("/intermediateLesson");
-                  }}
-                  sx={{ mt: 2 }}
-                >
-                  Go to Intermediate Lesson
-                </Button>
-              </Stack>
+
+              {lessons.map((lesson, index) => (
+                <TableContainer key={index} component={Paper}>
+                  <Table>
+                    <TableHead>
+                      <TableRow>
+                        <TableCell colSpan={3} align="center">
+                          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                            {lesson.title}
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <b>English</b>
+                        </TableCell>
+                        <TableCell align="right">
+                          <b>Nepali</b>
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {lesson.words.map((word, wordIndex) => (
+                        <TableRow key={wordIndex}>
+                          <TableCell>
+                            {word.english}
+                            <IconButton
+                              size="small"
+                              onClick={() => speakText(word.english)}
+                            >
+                              <VolumeUp />
+                            </IconButton>
+                          </TableCell>
+                          <TableCell align="right">
+                            {word.nepali}
+                            <IconButton
+                              size="small"
+                              onClick={() => speakText(word.nepali)}
+                            >
+                              <VolumeUp />
+                            </IconButton>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              ))}
+              <Card sx={{ width: "100%" }} className="gradientLight">
+                <CardContent>
+                  <CardActions
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Stack
+                      direction="row"
+                      gap={4}
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => {
+                          navigate("/learnlesson");
+                        }}
+                        sx={{ mt: 2 }}
+                      >
+                        Back to Learn lesson
+                      </Button>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => {
+                          navigate("/intermediateLesson");
+                        }}
+                        sx={{ mt: 2 }}
+                      >
+                        Go to Intermediate Lesson
+                      </Button>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => {
+                          navigate("/basicQuiz");
+                        }}
+                        sx={{ mt: 2 }}
+                      >
+                        Basic Quiz
+                      </Button>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => {
+                          navigate("/basicPractice");
+                        }}
+                        sx={{ mt: 2 }}
+                      >
+                        Basic Practice
+                      </Button>
+                    </Stack>
+                  </CardActions>
+                </CardContent>
+              </Card>
             </Box>
           </MainContent>
         </Box>
