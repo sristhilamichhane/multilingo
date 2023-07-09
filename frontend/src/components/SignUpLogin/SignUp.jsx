@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <Container maxWidth="xs">
       <Paper sx={{ padding: 2, marginTop: 10 }}>
@@ -54,4 +54,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
