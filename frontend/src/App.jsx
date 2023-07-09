@@ -20,6 +20,8 @@ import IntermediateQuiz from "./components/Quiz/IntermediateQuiz";
 import UserManagement from "./Pages/UserManagement";
 import Login from "./components/SignUpLogin/Login";
 import SignUp from "./components/SignUpLogin/SignUp";
+import Profile from "./components/UserProfile/Profile";
+import UserAccount from "./components/UserProfile/UserAccount";
 
 function App() {
   return (
@@ -54,6 +56,10 @@ function App() {
         {/* Routing Login  */}
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signUP" element={<SignUp />}></Route>
+
+        {/* Routing to profiles of users */}
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/myaccount" element={<UserAccount />}></Route>
       </Routes>
     </BrowserRouter>
   );
