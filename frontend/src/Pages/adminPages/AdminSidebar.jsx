@@ -4,23 +4,22 @@ import MuiDrawer from "@mui/material/Drawer";
 
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
-import PlayLessonIcon from "@mui/icons-material/PlayLesson";
-import CastForEducationIcon from "@mui/icons-material/CastForEducation";
-import HomeIcon from "@mui/icons-material/Home";
 
+import HomeIcon from "@mui/icons-material/Home";
+import NoteAddIcon from "@mui/icons-material/NoteAdd";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import QuizIcon from "@mui/icons-material/Quiz";
+
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import LeaderboardIcon from "@mui/icons-material/Leaderboard";
+
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-
+import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import { useNavigate } from "react-router-dom";
-import { useAppStore } from "../appStore";
+import { useAppStore } from "../../appStore";
 
 const drawerWidth = 240;
 
@@ -71,7 +70,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function Sidebar() {
+export default function AdminSidebar() {
   const theme = useTheme();
   // const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();
@@ -120,11 +119,12 @@ export default function Sidebar() {
               <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
+
           <ListItem
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
-              navigate("/learnlesson");
+              navigate("/admin");
             }}
           >
             <ListItemButton
@@ -141,61 +141,12 @@ export default function Sidebar() {
                   justifyContent: "center",
                 }}
               >
-                <PlayLessonIcon />
+                <NoteAddIcon />
               </ListItemIcon>
-              <ListItemText primary="Lessons" sx={{ opacity: open ? 1 : 0 }} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem
-            disablePadding
-            sx={{ display: "block" }}
-            onClick={() => {
-              navigate("/practice");
-            }}
-          >
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center",
-                }}
-              >
-                <CastForEducationIcon />
-              </ListItemIcon>
-              <ListItemText primary="Practice" sx={{ opacity: open ? 1 : 0 }} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem
-            disablePadding
-            sx={{ display: "block" }}
-            onClick={() => {
-              navigate("/quiz");
-            }}
-          >
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center",
-                }}
-              >
-                <QuizIcon />
-              </ListItemIcon>
-              <ListItemText primary="Quiz" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText
+                primary="Add Questions"
+                sx={{ opacity: open ? 1 : 0 }}
+              />
             </ListItemButton>
           </ListItem>
 
@@ -203,7 +154,7 @@ export default function Sidebar() {
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
-              navigate("/leaderboard");
+              navigate("/admin2");
             }}
           >
             <ListItemButton
@@ -220,10 +171,10 @@ export default function Sidebar() {
                   justifyContent: "center",
                 }}
               >
-                <LeaderboardIcon />
+                <SupervisedUserCircleIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Leaderboard"
+                primary="UserManagement"
                 sx={{ opacity: open ? 1 : 0 }}
               />
             </ListItemButton>

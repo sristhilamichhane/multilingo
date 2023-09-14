@@ -1,6 +1,6 @@
 import { Box, styled } from "@mui/material";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import AdminSidebar from "./adminPages/AdminSidebar";
+import AdminNavbar from "./adminPages/AdminNavbar";
 import {
   TextField,
   Button,
@@ -51,10 +51,10 @@ const AddQuestion = () => {
   return (
     <>
       <div className="bgColor">
-        <Navbar />
+        <AdminNavbar />
         <Box height={30} />
         <Box sx={{ display: "flex" }}>
-          <Sidebar />
+          <AdminSidebar />
           <MainContent>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
               <Box>

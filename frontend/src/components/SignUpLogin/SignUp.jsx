@@ -7,11 +7,12 @@ import {
   Paper,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import "../../Pages/Home.css";
 
 const SignUp = () => {
   return (
     <Container maxWidth="xs">
-      <Paper sx={{ padding: 2, marginTop: 10 }}>
+      <Paper sx={{ padding: 2, marginTop: 10 }} className="gradientLight">
         <Typography variant="h4" align="center" gutterBottom>
           Sign Up
         </Typography>
@@ -34,7 +35,9 @@ const SignUp = () => {
                 variant="outlined"
               />
             </Grid>
+
             <Grid item xs={12}>
+              <br />
               <Button
                 fullWidth
                 variant="contained"
@@ -45,7 +48,11 @@ const SignUp = () => {
               </Button>
               <br />
               <br />
-              <Link to="/login">Already have account? Login</Link>
+              <hr />
+              <br />
+              <Typography>
+                Already have account ? <Link to="/login"> Login</Link>
+              </Typography>
             </Grid>
           </Grid>
         </form>
