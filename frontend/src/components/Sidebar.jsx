@@ -7,7 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import PlayLessonIcon from "@mui/icons-material/PlayLesson";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import HomeIcon from "@mui/icons-material/Home";
-import NoteAddIcon from "@mui/icons-material/NoteAdd";
+
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import QuizIcon from "@mui/icons-material/Quiz";
@@ -18,7 +18,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
+
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "../appStore";
 
@@ -198,35 +198,7 @@ export default function Sidebar() {
               <ListItemText primary="Quiz" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
-          <ListItem
-            disablePadding
-            sx={{ display: "block" }}
-            onClick={() => {
-              navigate("/admin");
-            }}
-          >
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center",
-                }}
-              >
-                <NoteAddIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Add Questions"
-                sx={{ opacity: open ? 1 : 0 }}
-              />
-            </ListItemButton>
-          </ListItem>
+
           <ListItem
             disablePadding
             sx={{ display: "block" }}
@@ -252,35 +224,6 @@ export default function Sidebar() {
               </ListItemIcon>
               <ListItemText
                 primary="Leaderboard"
-                sx={{ opacity: open ? 1 : 0 }}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem
-            disablePadding
-            sx={{ display: "block" }}
-            onClick={() => {
-              navigate("/admin2");
-            }}
-          >
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center",
-                }}
-              >
-                <SupervisedUserCircleIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="UserManagement"
                 sx={{ opacity: open ? 1 : 0 }}
               />
             </ListItemButton>
