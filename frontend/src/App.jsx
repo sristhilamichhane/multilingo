@@ -22,18 +22,21 @@ import Login from "./components/SignUpLogin/Login";
 import SignUp from "./components/SignUpLogin/SignUp";
 import Profile from "./components/UserProfile/Profile";
 import UserAccount from "./components/UserProfile/UserAccount";
+import AdminHome from "./Pages/adminPages/AdminHome";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" exact element={<Login />} />
         {/* routing sidebar */}
-        <Route path="/" exact element={<Home />} />
+        <Route path="/UserHome" exact element={<Home />} />
         <Route path="/learnlesson" element={<LearnLesson />} />
         <Route path="/practice" element={<Practice />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         {/* Adim Access */}
+        <Route path="/AdminHome" element={<AdminHome />} />
         <Route path="/admin" element={<AddQuestion />} />
         <Route path="/admin2" element={<UserManagement />} />
 
