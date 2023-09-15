@@ -6,6 +6,3 @@ export default defineConfig({
   plugins: [react()],
 });
 
-// optimizeDeps: {
-//   include: ["@mui/material/Tooltip"],
-// },
