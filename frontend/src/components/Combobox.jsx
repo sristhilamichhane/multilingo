@@ -15,7 +15,7 @@ export default function ComboBox() {
     } else if (language == "maithili") {
       setContent(data.maithili);
     }
-  });
+  }, [language]);
   return (
     <div>
       <Stack direction="column" gap={2}>

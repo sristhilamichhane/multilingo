@@ -1,4 +1,7 @@
 import "./App.css";
+// import i18n from "./i18n";
+// import LocaleContext from "./LocaleContext";
+import { Suspense } from "react";
 // import Sidebar from "./Sidebar";
 import "regenerator-runtime/runtime";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -24,46 +27,54 @@ import Profile from "./components/UserProfile/Profile";
 import UserAccount from "./components/UserProfile/UserAccount";
 import AdminHome from "./Pages/adminPages/AdminHome";
 
+const Loading = () => {
+  return <>Loading...</>;
+};
+
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" exact element={<Login />} />
-        {/* routing sidebar */}
-        <Route path="/UserHome" exact element={<Home />} />
-        <Route path="/learnlesson" element={<LearnLesson />} />
-        <Route path="/practice" element={<Practice />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/leaderboard" element={<Leaderboard />} />
-        {/* Adim Access */}
-        <Route path="/AdminHome" element={<AdminHome />} />
-        <Route path="/admin" element={<AddQuestion />} />
-        <Route path="/admin2" element={<UserManagement />} />
+      {/* <LocaleContext.Provider> */}
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" exact element={<Login />} />
+          {/* routing sidebar */}
+          <Route path="/UserHome" exact element={<Home />} />
+          <Route path="/learnlesson" element={<LearnLesson />} />
+          <Route path="/practice" element={<Practice />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          {/* Adim Access */}
+          <Route path="/AdminHome" element={<AdminHome />} />
+          <Route path="/admin" element={<AddQuestion />} />
+          <Route path="/admin2" element={<UserManagement />} />
 
-        {/* routing learnLesson */}
-        <Route path="/basicLesson" element={<BasicLesson />} />
-        <Route path="/advanceLesson" element={<AdvanceLesson />} />
-        <Route path="/intermediateLesson" element={<IntermediateLesson />} />
-        {/* routing Practice*/}
-        <Route path="/basicPractice" element={<BasicPractice />} />
-        <Route path="/advancePractice" element={<AdvancePractice />} />
-        <Route
-          path="/intermediatePractice"
-          element={<IntermediatePractice />}
-        />
-        {/* routing Quiz*/}
-        <Route path="/basicQuiz" element={<BasicQuiz />} />
-        <Route path="/advanceQuiz" element={<AdvanceQuiz />} />
-        <Route path="/intermediateQuiz" element={<IntermediateQuiz />} />
+          {/* routing learnLesson */}
+          <Route path="/basicLesson" element={<BasicLesson />} />
+          <Route path="/advanceLesson" element={<AdvanceLesson />} />
+          <Route path="/intermediateLesson" element={<IntermediateLesson />} />
+          {/* routing Practice*/}
+          <Route path="/basicPractice" element={<BasicPractice />} />
+          <Route path="/advancePractice" element={<AdvancePractice />} />
+          <Route
+            path="/intermediatePractice"
+            element={<IntermediatePractice />}
+          />
+          {/* routing Quiz*/}
+          <Route path="/basicQuiz" element={<BasicQuiz />} />
+          <Route path="/advanceQuiz" element={<AdvanceQuiz />} />
+          <Route path="/intermediateQuiz" element={<IntermediateQuiz />} />
 
-        {/* Routing Login  */}
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/signUP" element={<SignUp />}></Route>
+          {/* Routing Login  */}
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signUP" element={<SignUp />}></Route>
 
-        {/* Routing to profiles of users */}
-        <Route path="/profile" element={<Profile />}></Route>
-        <Route path="/myaccount" element={<UserAccount />}></Route>
-      </Routes>
+          {/* Routing to profiles of users */}
+          <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/myaccount" element={<UserAccount />}></Route>
+        </Routes>
+      </Suspense>
+      {/* </LocaleContext.Provider> */}
     </BrowserRouter>
   );
 }
