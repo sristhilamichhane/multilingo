@@ -1,5 +1,5 @@
 import "./App.css";
-// import i18n from "./i18n";
+
 // import LocaleContext from "./LocaleContext";
 import { Suspense } from "react";
 // import Sidebar from "./Sidebar";
@@ -33,9 +33,9 @@ const Loading = () => {
 
 function App() {
   return (
-    <BrowserRouter>
-      {/* <LocaleContext.Provider> */}
-      <Suspense fallback={<Loading />}>
+    // <LocaleContext.Provider value={{ locale, setLocale }}>
+    <Suspense fallback={<Loading />}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Login />} />
           {/* routing sidebar */}
@@ -73,9 +73,9 @@ function App() {
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/myaccount" element={<UserAccount />}></Route>
         </Routes>
-      </Suspense>
-      {/* </LocaleContext.Provider> */}
-    </BrowserRouter>
+      </BrowserRouter>
+    </Suspense>
+    // </LocaleContext.Provider>
   );
 }
 
