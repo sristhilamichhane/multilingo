@@ -1,29 +1,35 @@
-import data from "../Pages/Data.json";
-import { useEffect, useState } from "react";
+// import data from "../Pages/Data.json";
+import { useEffect } from "react";
 import "../Pages/Home.css";
 import { Stack } from "@mui/material";
+import { useTranslation } from "react-i18next";
+
+import i18n from "../i18n";
+import i18next from "i18next";
 
 export default function ComboBox() {
-  const [language, setLanguage] = useState("nepali");
-  const [content, setContent] = useState({});
+  const { t } = useTranslation();
+
+  // i18n.on("languageChanged", (lng) => setLocale(i18n.language));
+
+  const handleChange = (event) => {
+    i18n.changeLanguage(event.target.value);
+  };
+
+  // const [language, setLanguage] = useState("english");
+  // const [content, setContent] = useState({});
 
   useEffect(() => {
-    if (language == "english") {
-      setContent(data.english);
-    } else if (language == "nepali") {
-      setContent(data.nepali);
-    } else if (language == "maithili") {
-      setContent(data.maithili);
+    if (localStorage.getItem("i18nextLng")?.length > 2) {
+      i18next.changeLanguage("en");
     }
-  }, [language]);
+  }, []);
   return (
     <div>
       <Stack direction="column" gap={2}>
         <select
-          value={language}
-          onChange={(e) => {
-            setLanguage(e.target.value);
-          }}
+          value={localStorage.getItem("i18nextLng")}
+          onChange={handleChange}
         >
           <option>english</option>
           <option>nepali</option>
@@ -32,7 +38,7 @@ export default function ComboBox() {
 
         {/* <span className="scoreSubTitle">{content.Title}</span> */}
 
-        <span className="scoreSubTitle">{content.Description}</span>
+        <span className="scoreSubTitle">{t("You have selected English")}</span>
       </Stack>
     </div>
   );
