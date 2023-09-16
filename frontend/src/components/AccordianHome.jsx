@@ -22,7 +22,7 @@ export default function AccordionHome() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            {t(" Go to lesson section and start learning from basics")}
+            {t("Go to lesson section and start learning from basics")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -40,7 +40,7 @@ export default function AccordionHome() {
         <AccordionDetails>
           <Typography>
             {t(
-              " After finishing each lesson try practicing from Practice section"
+              "After finishing each lesson, try practicing from the Practice section"
             )}
           </Typography>
         </AccordionDetails>
@@ -59,7 +59,7 @@ export default function AccordionHome() {
         <AccordionDetails>
           <Typography>
             {t(
-              " After practicing you should try some amazing Quiz and test yourself."
+              "After practicing, you should try some amazing Quiz and test yourself"
             )}
           </Typography>
         </AccordionDetails>
@@ -77,10 +77,9 @@ export default function AccordionHome() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            {t(`
-  And from the leaderboard, you can see your rank in this learning
-  journey
-`)}
+            {t(
+              "And from the leaderboard, you can see your rank in this learning journey"
+            )}
           </Typography>
         </AccordionDetails>
       </Accordion>
