@@ -15,6 +15,7 @@ import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import AccordionHome from "../components/AccordianHome";
 import WelcomePage from "../components/WelcomePage";
 import ComboBox from "../components/Combobox";
+import { useTranslation } from "react-i18next";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -25,6 +26,7 @@ const MainContent = styled(Box)(({ theme }) => ({
 }));
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="bgColor">
@@ -65,14 +67,14 @@ const Home = () => {
                         <LocalLibraryIcon />
                       </div>
                       <Typography gutterBottom variant="h5" component="div">
-                        Lesson
+                        {t("Lesson")}
                       </Typography>
                       <Typography
                         variant="subtitle1"
                         component="div"
                         sx={{ fontWeight: "bold" }}
                       >
-                        learn first and practice accordingly
+                        {t("Learn first and practice accordingly")}
                       </Typography>
                     </CardContent>
                   </Card>
@@ -93,7 +95,7 @@ const Home = () => {
                           <ComboBox />
                         </span>
                         <span className="scoreSubTitle">
-                          तपाईलाई थाहा भएको भाषा चयन गर्नुहोस्
+                          {t("Select your proficient language")}
                         </span>
                       </div>
                     </Stack>
@@ -111,7 +113,7 @@ const Home = () => {
                           <ComboBox />{" "}
                         </span>
                         <span className="scoreSubTitle">
-                          तपाईंले सिक्न चाहेको भाषा छान्नुहोस्
+                          {t("You have selected English")}
                         </span>
                       </div>
                     </Stack>
@@ -131,7 +133,7 @@ const Home = () => {
               <Grid item xs={12} md={4}>
                 <Card sx={{ height: "55vh" }} className="gradient">
                   <CardContent>
-                    <Typography variant="h4">Guidance here:</Typography>
+                    <Typography variant="h4">{t("Guidance here")}</Typography>
                     <br />
                     <AccordionHome />
                   </CardContent>
