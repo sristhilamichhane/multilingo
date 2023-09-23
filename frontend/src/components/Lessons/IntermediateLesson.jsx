@@ -36,17 +36,20 @@ const IntermediateLesson = () => {
       words: [
         {
           english: "How are you doing?",
-          nepali: "तपाईंलाई कस्तो छ? (Tapailai kasto cha?)",
+          nepali: "अहांक की हाल-चाल? (Ahak ki hal chal)",
         },
         {
           english: "I don't understand",
-          nepali: "मैले सम्झिन सक्दिन (Maile samjhina sakdina)",
+          nepali: "हम नाहि बुझए छि(Hum nahi bujhiye chi)",
         },
         {
           english: "Where is the restroom?",
-          nepali: "शौचालय कहाँ छ? (Shauchalaya kaha chha?)",
+          nepali: "शौचालय कतय अछि ? (Shauchalaya kataye aachi)",
         },
-        { english: "What time is it?", nepali: "कति बजे छ? (Kati baje cha?)" },
+        {
+          english: "What time is it?",
+          nepali: "कोन समय अछि ? (Kon samaye aachi)",
+        },
         // Add more words here
       ],
     },
@@ -55,17 +58,16 @@ const IntermediateLesson = () => {
       words: [
         {
           english: "I need help",
-          nepali: "मलाई सहयोग चाहिए (Malai sahayog chahiye)",
+          nepali: "हमरा मदद चाही (Hamara madad chahie)",
         },
         {
           english: "Do you speak English?",
-          nepali:
-            "तपाईंलाई अंग्रेजी बोल्नुहुन्छ? (Tapailai angreji bolnuhunchha?)",
+          nepali: "अहाँ अंग्रेजी बजैत छी? (Aha Angreji bajait chi)",
         },
         {
           english: "Can you repeat that, please?",
           nepali:
-            "कृपया त्यो फेरी गर्न सक्नुहुन्छ? (Kripaya tyo feri garnu saknuhunchha?)",
+            "की अहाँ से दोहरा सकैत छी, कृपया?(Ki aha se dohora skait chi,kripaya)",
         },
         {
           english: "Where is the nearest bank?",

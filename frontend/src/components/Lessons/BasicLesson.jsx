@@ -36,17 +36,17 @@ const BasicLesson = () => {
       title: "Greetings",
       words: [
         { english: "Hello", nepali: "नमस्ते (Namaste)" },
-        { english: "Thank you", nepali: "धन्यवाद (Dhanyabad)" },
-        { english: "Goodbye", nepali: "बिदाई (Bidai)" },
+        { english: "Thank you", nepali: "अहां कें धन्यवाद(Aha k dhanewad)" },
+        { english: "Goodbye", nepali: "अलविदा(Aalbida)" },
       ],
     },
     {
       title: "Basics",
       words: [
         { english: "Please", nepali: "कृपया (Kripaya)" },
-        { english: "Sorry", nepali: "माफ गर्नुहोस् (Maaf garnuhos)" },
-        { english: "Yes", nepali: "हो (Ho)" },
-        { english: "No", nepali: "होइन (Hoina)" },
+        { english: "Sorry", nepali: "माफ क दिय(Maaf ka diya)" },
+        { english: "Yes", nepali: "हँ (Han)" },
+        { english: "No", nepali: "नहि (nah)" },
       ],
     },
     {
@@ -54,23 +54,23 @@ const BasicLesson = () => {
       words: [
         {
           english: "How are you?",
-          nepali: "तपाईंलाई कस्तो छ? (Tapailai kasto cha?)",
+          nepali: "अहांक कोना छी? (Ahak kona chi)",
         },
-        { english: "I'm fine", nepali: "म ठिकाइ छु (Ma thikai chu)" },
+        { english: "I'm fine", nepali: "हम ठीक छी(Hum thik chi)" },
         {
           english: "What is your name?",
-          nepali: "तपाईंको नाम के हो? (Tapainko naam ke ho?)",
+          nepali: "अहांक नाम की छी?(Ahak nam ki chi)",
         },
         {
           english: "My name is...",
-          nepali: "मेरो नाम ... हो (Mero naam ... ho)",
+          nepali: "हमर नाम थिक.. (hamar nam thik...)",
         },
       ],
     },
     {
       title: "Polite Phrases",
       words: [
-        { english: "Excuse me", nepali: "क्षमा पर्नुहोस् (Kshama parnuhos)" },
+        { english: "Excuse me", nepali: "क्षक्षमा करु (Kshama karu)" },
         // Add more words here
       ],
     },
