@@ -95,7 +95,7 @@ const Home = () => {
                           <ComboBox />
                         </span>
                         <span className="scoreSubTitle">
-                          {t("Select your proficient language")}
+                          {t("Select a language you want to learn")}
                         </span>
                       </div>
                     </Stack>
@@ -109,12 +109,9 @@ const Home = () => {
                         <GradeIcon />
                       </div>
                       <div className="paddingAll">
-                        <span className="scoreTitle">
-                          <ComboBox />{" "}
-                        </span>
-                        <span className="scoreSubTitle">
-                          {t("You have selected English")}
-                        </span>
+                        <span className="scoreTitle">Learn and grow!</span>
+                        <br />
+                        <span className="scoreSubTitle">{t("Go for it")}</span>
                       </div>
                     </Stack>
                   </Typography>
