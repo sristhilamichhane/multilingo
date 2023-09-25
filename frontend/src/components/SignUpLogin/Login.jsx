@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "../../Pages/Home.css";
-// import axios from "axios";
+import axios from "axios";
 
 function Login() {
   const navigate = useNavigate();
@@ -21,31 +21,21 @@ function Login() {
     e.preventDefault(); // Prevent the form from submitting
 
     try {
-      // Check if user data exists in local storage
-      const userData = localStorage.getItem("user");
-      if (!userData) {
-        alert("No user data found. Please sign up first.");
-        return;
-      }
+      const response = await axios.post(
+        "http://localhost:3000/api/users/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
 
-      // Parse user data from local storage
-      const user = JSON.parse(userData);
+      console.log(response.data);
 
-      // Perform login with the user's email and password
-      // Modify the fetch request to use GET
-      const response = await fetch("http://localhost:3000/api/users/login", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (response.ok) {
+      if (response.status === 200) {
         // Determine the role of the user
-        const role = user.role;
-
+        localStorage.setItem("user", JSON.stringify(response));
         // Redirect to the appropriate home page based on the role
-        if (role === "admin") {
+        if (response.data.user.role === "admin") {
           navigate("/AdminHome");
         } else {
           navigate("/UserHome");

@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import "dotenv/config";
-import prisma from "../libs/prisma.js";
+import { prisma } from "../libs/prisma.js";
 
 const isAdmin = async (req, res, next) => {
   const { id } = jwt.verify(
@@ -15,10 +15,10 @@ const isAdmin = async (req, res, next) => {
       },
     });
     if (user) {
-      if (user.isAdmin) {
+      if (user.role === "admin") {
         next();
       } else {
-        res.status(400).json({ success: false, message: "Not a Admin" });
+        res.status(400).json({ success: false, message: "Not an Admin" });
       }
     } else {
       res.status(400).json({ success: false, message: "User not found" });

@@ -7,6 +7,6 @@ router.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-router.post("/signup", createUser).get("/login", loginUser);
+router.post("/signup", createUser).post("/login", loginUser);
 
 export default router;

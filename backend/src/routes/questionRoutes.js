@@ -3,9 +3,9 @@ import {
   createQuestion,
   getAllQuestions,
   getQuestionByLevel,
-} from "../controllers/questionController";
-import auth from "../middlewares/isAuthenticated";
-import isAdmin from "../middlewares/isAdmin";
+} from "../controllers/questionController.js";
+import auth from "../middlewares/isAuthenticated.js";
+import isAdmin from "../middlewares/isAdmin.js";
 
 const router = Router();
 
