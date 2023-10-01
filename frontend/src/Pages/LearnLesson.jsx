@@ -33,6 +33,38 @@ const LearnLesson = () => {
           <Sidebar />
           <MainContent>
             <Box component="main" sx={{ flexGrow: 1, pt: 5 }}>
+              <Typography variant="body1" sx={{ mb: 2 }}>
+                <b
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  As you have selected maithili language, here is a small
+                  information about maithili language:
+                </b>
+                <br />
+                Maithili is an Indo-Aryan language spoken in Nepal and northern
+                India by about 35 million people, out of which about 3 million
+                reside in Nepal. It is the second most widely used language in
+                Nepal. Dialects include Bajjika, Dehati, Kisan, Bantar, Barmeli,
+                Musar, Tati, Kortha, Jolaha, Thetiya, Thēthi, Tharuwat etc.
+                Standard Maithili is spoken by Madhesis people. It is also known
+                as southern Nepali language in Terai in Nepal.
+                <br />
+                <br />
+                <b
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  Lets start our maithili learning journey from basics : click
+                  on start button of basics and continue learning 💖
+                </b>
+              </Typography>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={4}>
                   <Card
