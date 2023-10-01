@@ -26,12 +26,7 @@ const MainContent = styled(Box)(({ theme }) => ({
 }));
 
 const BasicPractice = () => {
-  const givenSentence = ` मेरो नाम राजा हो म नेपाल बाट हुन् र म नेपाली भाषा
-  बोल्छु मलाई नेपाली भाषा पढ्न र लेख्नन मन पर्छ मेरो
-  परिवारमा मेरो बाबु आमा र दाजु भाइ छन् मैले उच्च
-  शिक्षा पूरा गरेको छु र हाल मैले कम्प्युटर संग सम्बन्धित
-  काम गर्छु म गीत सुन्ने पुस्तक पढ्ने र मित्रहरूसंग समय
-  बिताउने गर्छु`;
+  const givenSentence = `हामार नाम सृष्टी छि`;
 
   const startListening = () =>
     SpeechRecognition.startListening({ continuous: true, language: "ne-NP" });
@@ -82,12 +77,7 @@ const BasicPractice = () => {
                       <Typography sx={{ p: 1 }}>{givenSentence}</Typography>
                       <hr />
                       <Typography sx={{ p: 1 }}>
-                        Mero name Raja ho. Ma Nepal bata hu ra ma Nepali vasha
-                        bolxu. Malai Nepali vasha padhna ra lekhna man parxa.
-                        Mero paribarma mero baba, aama, ra daju-vai chhan. Maile
-                        uchha sikxya pura gareko chhu ra hal maile computer
-                        sanga sambandhit kam garxu. Ma geet sunne, Pustak
-                        padhne, ra mitra haru sanga samaye bitaune garxu.
+                        Hamar naam sristhi chhi
                       </Typography>
                       <hr />
                       <Typography sx={{ p: 1, color: "blue" }}>
