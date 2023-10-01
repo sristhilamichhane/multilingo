@@ -14,6 +14,7 @@ import {
   CardContent,
 } from "@mui/material";
 import { useState } from "react";
+import axios from "axios"; // Import Axios
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -35,17 +36,39 @@ const AddQuestion = () => {
     setOptions(updatedOptions);
   };
 
-  const handleAddQuestion = () => {
+  const handleAddQuestion = async () => {
+    // Create a new question object
     const newQuestion = {
       question,
-      options,
-      correctOption,
+      answer: correctOption, // Use correctOption as answer
+      option1: options[0],
+      option2: options[1],
+      option3: options[2],
+      option4: options[3],
+      level: "your_level_here", // Set the level as needed
     };
 
-    setQuestions([...questions, newQuestion]);
-    setQuestion("");
-    setOptions(["", "", "", ""]);
-    setCorrectOption("");
+    try {
+      // Send a POST request to create the question
+      const response = await axios.post(
+        "http://localhost:3000/api/questions/create", // Update the URL to match your API route
+        newQuestion
+      );
+
+      if (response.status === 200) {
+        // Question was successfully created
+        setQuestions([...questions, response.data.question]);
+        setQuestion("");
+        setOptions(["", "", "", ""]);
+        setCorrectOption("");
+      } else {
+        // Handle error
+        alert("Failed to create the question");
+      }
+    } catch (error) {
+      console.error("Error creating question:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   return (
