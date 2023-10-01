@@ -97,7 +97,7 @@ export default function AdminSidebar() {
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
-              navigate("/");
+              navigate("/AdminHome");
             }}
           >
             <ListItemButton
