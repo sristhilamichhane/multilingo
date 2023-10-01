@@ -98,7 +98,7 @@ export default function Sidebar() {
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
-              navigate("/");
+              navigate("/UserHome");
             }}
           >
             <ListItemButton
