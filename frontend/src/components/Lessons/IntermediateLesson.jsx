@@ -133,7 +133,7 @@ const IntermediateLesson = () => {
                           <b>English</b>
                         </TableCell>
                         <TableCell align="right">
-                          <b>Nepali</b>
+                          <b>Maithili</b>
                         </TableCell>
                       </TableRow>
                     </TableHead>
