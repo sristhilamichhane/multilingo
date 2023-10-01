@@ -1,68 +1,63 @@
 const QuizData = [
   {
-    question: "What is the Nepali translation of 'Hello'?",
+    question: "What is the Maithili translation of 'Hello'?",
     options: [
       { type: "text", value: ["नमस्ते", "सुप्रभात", "केही नभयो", "साधैं छ"] },
     ],
     answer: 1,
   },
   {
-    question: "Choose the correct translation for 'Thank you' in Nepali.",
+    question: "Choose the correct translation for 'Thank you' in Maithili.",
     options: [
       {
         type: "text",
-        value: ["माफ गर्नुहोस्", "धन्यवाद", "के गर्नु होला", "हामीले छोडें"],
+        value: [
+          "माफ गर्नुहोस्",
+          "अहां कें धन्यवाद",
+          "के गर्नु होला",
+          "हामीले छोडें",
+        ],
       },
     ],
     answer: 2,
   },
   {
-    question: "What is the Nepali word for 'Goodbye'?",
+    question: "What is the Maithili word for 'Goodbye'?",
     options: [
       {
         type: "text",
-        value: ["फेरि भेटौला", "धेरै धेरै धन्यवाद", "छिटो बिदाई", "शुभकामना"],
+        value: ["फेरि भेटौला", "धेरै धेरै धन्यवाद", "अलविदा", "शुभकामना"],
       },
     ],
     answer: 3,
   },
   {
-    question: "Which option means 'I am hungry' in Nepali?",
+    question: "Which option means 'How are you?' in Maithili?",
     options: [
       {
         type: "text",
-        value: [
-          "मलाई प्यास लाग्यो",
-          "हामीले छोडें",
-          "कस्तो हो",
-          "तिमीलाई कस्तो छ",
-        ],
+        value: ["अहांक कोना छी", "हामीले छोडें", "कस्तो हो", "तिमीलाई कस्तो छ"],
       },
     ],
     answer: 1,
   },
   {
-    question: "Choose the correct translation for 'How are you?' in Nepali.",
+    question: "Choose the correct translation for 'I'm fine' in Maithili.",
     options: [
       {
         type: "text",
-        value: [
-          "तिमीलाई कस्तो छ?",
-          "के गर्नु होला?",
-          "म कस्तो छु?",
-          "होइन, धन्यवाद",
-        ],
+        value: ["हम ठीक छी", "के गर्नु होला?", "म कस्तो छु?", "होइन, धन्यवाद"],
       },
     ],
     answer: 1,
   },
   {
-    question: "Which option means 'I love you' in Nepali?",
+    question: "Which option means 'I love you' in Maithili?",
     options: [
       {
         type: "text",
         value: [
-          "म तिमीलाई माया गर्छु",
+          "हम अहां सँ प्रेम करैत छी",
           "तिमीलाई के हुँदैछ?",
           "यो कति हो?",
           "होइन, धन्यवाद",
@@ -72,7 +67,7 @@ const QuizData = [
     answer: 1,
   },
   {
-    question: "What is the Nepali word for 'Good morning'?",
+    question: "What is the Maithili word for 'Good morning'?",
     options: [
       {
         type: "text",
@@ -82,12 +77,13 @@ const QuizData = [
     answer: 1,
   },
   {
-    question: "Choose the correct translation for 'How are you?' in Nepali.",
+    question:
+      "Choose the correct translation for 'What is your name?' in Maithili.",
     options: [
       {
         type: "text",
         value: [
-          "तिमीलाई कस्तो छ?",
+          "अहांक नाम की छी?",
           "के गर्नु होला?",
           "म कस्तो छु?",
           "होइन, धन्यवाद",
@@ -97,21 +93,31 @@ const QuizData = [
     answer: 1,
   },
   {
-    question: "What is the Nepali translation of 'Thank you'?",
+    question: "What is the Maithili translation of 'How are you doing'",
     options: [
       {
         type: "text",
-        value: ["धन्यवाद", "माफ गर्नुहोस्", "के गर्नु होला", "हामीले छोडें"],
+        value: [
+          "अहांक की हाल-चाल? ",
+          "माफ गर्नुहोस्",
+          "के गर्नु होला",
+          "हामीले छोडें",
+        ],
       },
     ],
     answer: 1,
   },
   {
-    question: "Choose the correct translation for 'Good night' in Nepali.",
+    question: "Choose the correct translation for 'I need help' in Maithili.",
     options: [
       {
         type: "text",
-        value: ["फेरि भेटौला", "धेरै धेरै धन्यवाद", "शुभरात्री", "शुभकामना"],
+        value: [
+          "फेरि भेटौला",
+          "धेरै धेरै धन्यवाद",
+          "हमरा मदद चाही",
+          "शुभकामना",
+        ],
       },
     ],
     answer: 3,
