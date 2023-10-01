@@ -16,7 +16,7 @@ const images = [
   {
     label: "शान्ति मुस्कानबाट सुरु हुन्छ ।  ",
     imgPath:
-      "https://www.kullabs.org/uploads/20150106living-together-600x0.jpg",
+      "https://visitsnepal.com/wp-content/uploads/2020/08/culture-of-mountain-870x480.jpg",
   },
   {
     label: "जस्तो देश उस्तै भेष ",
