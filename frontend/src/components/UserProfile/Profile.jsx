@@ -1,4 +1,5 @@
 import {
+  Button,
   Avatar,
   Box,
   Divider,
@@ -7,9 +8,10 @@ import {
   Typography,
   styled,
 } from "@mui/material";
-import Navbar from "../Navbar";
-import Sidebar from "../Sidebar";
+import { useNavigate } from "react-router-dom";
 import "../../Pages/Home.css";
+import AdminNavbar from "../../Pages/adminPages/AdminNavbar";
+import AdminSidebar from "../../Pages/adminPages/AdminSidebar";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -20,21 +22,21 @@ const MainContent = styled(Box)(({ theme }) => ({
 }));
 
 const UserManagement = () => {
-  const user = {
-    name: "John Doe",
-    country: "United States",
-    address: "123 Main St",
-    email: "john@example.com",
-    phoneNumber: "+1 555-123-4567",
+  const navigate = useNavigate();
+  const userData = JSON.parse(localStorage.getItem("user"));
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
   };
 
   return (
     <>
       <div className="bgColor">
-        <Navbar />
+        <AdminNavbar />
         <Box height={30} />
         <Box sx={{ display: "flex" }}>
-          <Sidebar />
+          <AdminSidebar />
           <MainContent>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
               <Paper
@@ -56,30 +58,36 @@ const UserManagement = () => {
                         {/* You can add a user's profile picture here */}
                       </Avatar>
                       <Typography variant="h6" mt={1}>
-                        {user.name}
+                        {userData.name}
                       </Typography>
                     </Box>
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <Typography variant="body1">
-                      <strong>Name:</strong> {user.name}
+                      <strong>Name:</strong> {userData.name} Work
                     </Typography>
                     <Typography variant="body1">
-                      <strong>Country:</strong> {user.country}
+                      <strong>Email:</strong> {userData.email} work@gmail.com
                     </Typography>
-                    <Typography variant="body1">
-                      <strong>Address:</strong> {user.address}
-                    </Typography>
-                    <Typography variant="body1">
-                      <strong>Email:</strong> {user.email}
-                    </Typography>
-                    <Typography variant="body1">
-                      <strong>Phone Number:</strong> {user.phoneNumber}
-                    </Typography>
+                    {userData.role === "admin" && (
+                      <div>
+                        {/* Additional content for admin */}
+                        <Typography variant="body1">
+                          <strong>Admin Information:</strong> Display
+                          admin-specific details here.
+                        </Typography>
+                      </div>
+                    )}
                   </Grid>
                 </Grid>
                 <Divider sx={{ my: 2 }} />
-                {/* Add more profile details or actions as needed */}
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
               </Paper>
             </Box>
           </MainContent>
