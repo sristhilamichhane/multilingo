@@ -111,7 +111,12 @@ const Home = () => {
                       <div className="paddingAll">
                         <span className="scoreTitle">Learn and grow!</span>
                         <br />
-                        <span className="scoreSubTitle">{t("Go for it")}</span>
+                        <hr />
+                        <span className="scoreSubTitle">
+                          {t(
+                            "Unlock your new journey to learn something new ! "
+                          )}
+                        </span>
                       </div>
                     </Stack>
                   </Typography>
