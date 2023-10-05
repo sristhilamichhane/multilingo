@@ -10,12 +10,11 @@ import AdminSidebar from "./AdminSidebar";
 import AdminNavbar from "./AdminNavbar";
 import Grid from "@mui/material/Grid";
 import "../Home.css";
-import GradeIcon from "@mui/icons-material/Grade";
-import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
+import CountUp from "react-countup";
 
 import BarGraph from "./Charts/BarGraph";
-import ComboBox from "../../components/Combobox";
 import PieActiveArc from "./Charts/PieChart";
+import GeoChart from "./Charts/GeoChart";
 
 const MainContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
@@ -41,82 +40,38 @@ const AdminHome = () => {
                     sx={{ width: "100%", height: 205 }}
                     className="gradient"
                   >
-                    <CardContent>
-                      <div>
-                        <LocalLibraryIcon />
-                      </div>
-                      <Typography gutterBottom variant="h5" component="div">
-                        पाठ
-                      </Typography>
-                      <Typography
-                        variant="subtitle1"
-                        component="div"
-                        sx={{ fontWeight: "bold" }}
-                      >
-                        पहिले सिक्नुहोस् त्यसपछि अभ्यास गर्नुहोस्
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                  <Card
-                    sx={{ width: "100%", height: 205 }}
-                    className="gradientLight"
-                  >
-                    <CardContent>
-                      <div>
-                        <LocalLibraryIcon />
-                      </div>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Lesson
-                      </Typography>
-                      <Typography
-                        variant="subtitle1"
-                        component="div"
-                        sx={{ fontWeight: "bold" }}
-                      >
-                        learn first and practice accordingly
-                      </Typography>
-                    </CardContent>
+                    <BarGraph />
                   </Card>
                 </Stack>
               </Grid>
               <Grid item xs={12} md={4}>
                 <Card
-                  sx={{ width: "100%", height: "50%" }}
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                  }}
                   className="gradientLight"
                 >
-                  <Typography gutterBottom variant="h5" component="div">
-                    <Stack spacing={2} direction="row">
-                      <div className="iconStyle">
-                        <GradeIcon />
-                      </div>
-                      <div className="paddingAll">
-                        <span className="scoreTitle">
-                          <ComboBox />
-                        </span>
-                        <span className="scoreSubTitle">
-                          तपाईलाई थाहा भएको भाषा चयन गर्नुहोस्
-                        </span>
-                      </div>
+                  <CardContent>
+                    <Stack
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                      direction="column"
+                      gap={4}
+                    >
+                      <Typography variant="h5">Visitors</Typography>
+                      <Typography>
+                        <CountUp
+                          enableScrollSpy:true
+                          dealy={1}
+                          end={22000}
+                          duration={0.3}
+                        />
+                      </Typography>
+                      <span> since last week</span>
                     </Stack>
-                  </Typography>
-                </Card>
-
-                <Card sx={{ width: "100%" }} className="gradient">
-                  <Typography gutterBottom variant="h5" component="div">
-                    <Stack spacing={2} direction="row">
-                      <div className="iconStyle">
-                        <GradeIcon />
-                      </div>
-                      <div className="paddingAll">
-                        <span className="scoreTitle">
-                          <ComboBox />{" "}
-                        </span>
-                        <span className="scoreSubTitle">
-                          तपाईंले सिक्न चाहेको भाषा छान्नुहोस्
-                        </span>
-                      </div>
-                    </Stack>
-                  </Typography>
+                  </CardContent>
                 </Card>
               </Grid>
             </Grid>
@@ -125,14 +80,14 @@ const AdminHome = () => {
               <Grid item xs={12} md={8}>
                 <Card sx={{ height: "55vh" }} className="gradientLight">
                   <CardContent align="center">
-                    <BarGraph />
+                    <GeoChart />
                   </CardContent>
                 </Card>
               </Grid>
               <Grid item xs={12} md={4}>
                 <Card sx={{ height: "55vh" }} className="gradient">
                   <CardContent>
-                    <Typography variant="h4">PieChart</Typography>
+                    <Typography variant="h4">User Engagement:</Typography>
                     <br />
                     <PieActiveArc />
                   </CardContent>
