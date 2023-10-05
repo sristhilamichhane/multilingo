@@ -113,9 +113,7 @@ const Home = () => {
                         <br />
                         <hr />
                         <span className="scoreSubTitle">
-                          {t(
-                            "Unlock your new journey to learn something new ! "
-                          )}
+                          {t("Learning never ends !")}
                         </span>
                       </div>
                     </Stack>
