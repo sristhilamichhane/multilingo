@@ -26,10 +26,10 @@ const MainContent = styled(Box)(({ theme }) => ({
 }));
 
 const BasicPractice = () => {
-  const givenSentence = `हामार नाम सृष्टी छि`;
+  const givenSentence = `राम राम सब गोटे हम एतय अपन भाषा सीखय वाला वेब ऐप प्रस्तुत करय लेल आयल छी आशा अछि जे अहाँ सब के ई नीक लागत`;
 
   const startListening = () =>
-    SpeechRecognition.startListening({ continuous: true, language: "ne-NP" });
+    SpeechRecognition.startListening({ continuous: true, language: "hi-IN" });
   const { transcript, resetTranscript, browserSupportsSpeechRecognition } =
     useSpeechRecognition();
 
@@ -77,7 +77,9 @@ const BasicPractice = () => {
                       <Typography sx={{ p: 1 }}>{givenSentence}</Typography>
                       <hr />
                       <Typography sx={{ p: 1 }}>
-                        Hamar naam sristhi chhi
+                        Ram Ram sab gete hum yetaye apan vasha sikhayeh wala web
+                        app prastut karaye lel aayel chi aasha achi je aha sab
+                        ke e nik lagat
                       </Typography>
                       <hr />
                       <Typography sx={{ p: 1, color: "blue" }}>
