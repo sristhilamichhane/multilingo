@@ -36,20 +36,20 @@ const AdvanceLesson = () => {
       words: [
         {
           english: "What are your hobbies?",
-          nepali: "तपाईंको शौक के हो? (Tapainko shauch k ho?)",
+          nepali: "अहाँक कोन-कोन शौक अछि  (Ahak kon-kon sauk aachi)",
         },
         {
           english: "I'm interested in...",
-          nepali: "मलाई ... मन पर्छ (Malai ... man parcha)",
+          nepali: "हमरा रुचि अछि...(Hamar ruchi aachi...)",
         },
         {
           english: "Could you please recommend a good restaurant?",
           nepali:
-            "कृपया एक राम्रो भोजनालय सिफारिस गर्नुहुन्छ? (Kripaya ek ramro bhojnalaya sifaris garnuhunchha?)",
+            "नीक रेस्टोरेंटक सिफारिश क सकैत छी? (Nik resturant sifarish ka sakait chi)",
         },
         {
           english: "What is the weather like today?",
-          nepali: "आजको मौसम कस्तो छ? (Aajko mausam kasto cha?)",
+          nepali: "आइ मौसम केहन अछि (Aai mausham kohan aachi?)",
         },
         // Add more words here
       ],
@@ -60,27 +60,25 @@ const AdvanceLesson = () => {
         {
           english: "Do you have any recommendations for places to visit?",
           nepali:
-            "तपाईंलाई घुम्ने स्थानहरूको कुनै सिफारिस छ? (Tapailai ghumné sthanharuko kunai sifaris cha?)",
+            "घुमबाक लेल कोनो सिफारिश अछि (Ghumbak lel kono sifarish aachi)",
         },
         {
           english: "What is the cost of living in this city?",
-          nepali:
-            "यस शहरमा बस्ने खर्च कति छ? (Yas shaharma basne kharcha kati cha?)",
+          nepali: "एहि शहर मे रहबाक की लागत (Yehi sahar meh rahabak ki lagat)",
         },
         {
           english: "Tell me about the local customs and traditions",
           nepali:
-            "स्थानिय रीति निति बारे बताउनुहोस् (Sthaniya reeti niti bare bataunuhos)",
+            "स्थानीय रीति-रिवाज आ परंपराक बारे मे बताउ (Sthaniya reet-riwaz ah parampara bare meh batau)",
         },
         {
           english: "What are the popular tourist attractions?",
           nepali:
-            "प्रसिद्ध यात्रा स्थलहरू कुन कुन छन्? (Prasiddha yatra sthalharu kun kun chan?)",
+            "पपर्यटनक लोकप्रिय आकर्षण की अछि(Paryatanak lokpriya aakarshan ki aachi)",
         },
         {
           english: "I need help with translation",
-          nepali:
-            "मलाई अनुवादमा मदत चाहिएको छ (Malai anuvadma madat chahiye ko cha)",
+          nepali: "अनुवाद मे हमरा मदद चाही (Anubad meh hamar madad chahi)",
         },
         // Add more words here
       ],
