@@ -62,7 +62,7 @@ export default function Navbar() {
   const dopen = useAppStore((state) => state.dopen);
 
   const handleProfileClick = () => {
-    navigate("/profile");
+    navigate("/userprofile");
   };
 
   const handleMenuToggle = () => {
