@@ -11,7 +11,7 @@ import {
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
 // import "./Home.css";
-import QuizData from "./QuizData";
+import QuizData from "./IntermediateQuizData";
 import { useNavigate } from "react-router-dom";
 
 const MainContent = styled(Box)(({ theme }) => ({
