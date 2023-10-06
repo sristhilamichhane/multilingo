@@ -62,7 +62,7 @@ export default function AdminNavbar() {
   const dopen = useAppStore((state) => state.dopen);
 
   const handleProfileClick = () => {
-    navigate("/profile");
+    navigate("/adminprofile");
   };
 
   const handleMenuToggle = () => {
