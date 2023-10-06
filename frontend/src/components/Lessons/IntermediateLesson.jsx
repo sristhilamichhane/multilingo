@@ -36,19 +36,19 @@ const IntermediateLesson = () => {
       words: [
         {
           english: "How are you doing?",
-          nepali: "अहांक की हाल-चाल? (Ahak ki hal chal)",
+          nepali: "अहांक की हाल-चाल (Ahak ki hal chal)",
         },
         {
           english: "I don't understand",
-          nepali: "हम नाहि बुझए छि(Hum nahi bujhiye chi)",
+          nepali: "हम नाहि बुझए छि (Hum nahi bujhiye chi)",
         },
         {
           english: "Where is the restroom?",
-          nepali: "शौचालय कतय अछि ? (Shauchalaya kataye aachi)",
+          nepali: "शौचालय कतय अछि  (Shauchalaya kataye aachi)",
         },
         {
           english: "What time is it?",
-          nepali: "कोन समय अछि ? (Kon samaye aachi)",
+          nepali: "कोन समय अछि  (Kon samaye aachi)",
         },
         // Add more words here
       ],
@@ -62,25 +62,25 @@ const IntermediateLesson = () => {
         },
         {
           english: "Do you speak English?",
-          nepali: "अहाँ अंग्रेजी बजैत छी? (Aha Angreji bajait chi)",
+          nepali: "अहाँ अंग्रेजी बजैत छी  (Aha Angreji bajait chi)",
         },
         {
           english: "Can you repeat that, please?",
           nepali:
-            "की अहाँ से दोहरा सकैत छी, कृपया?(Ki aha se dohora skait chi,kripaya)",
+            "की अहाँ से दोहरा सकैत छी, कृपया (Ki aha se dohora skait chi,kripaya)",
         },
         {
           english: "Where is the nearest bank?",
-          nepali: "नजिकैको बैंक कहाँ छ? (Najikaiko bank kaha chha?)",
+          nepali: "नजदीकी बैंक कतय अछि  (Najdiki bank kataye aachi?)",
         },
         {
           english: "What is this called?",
-          nepali: "यसलाई के भनिन्छ? (Yasalai ke bhaninchha?)",
+          nepali: "एकरा की कहल जाइत छैक  (Yakara ki kahal jait chaika?)",
         },
         {
           english: "I'm sorry, I don't know",
           nepali:
-            "माफ गर्नुहोला, मलाई थाहा छैन (Maaf garnuhola, malai thaha chaina)",
+            "माफ करब, हमरा नहि बुझल अछि (Maf karab , hamara nahi bujhal aachi)",
         },
         // Add more words here
       ],
