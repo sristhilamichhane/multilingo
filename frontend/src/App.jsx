@@ -23,9 +23,9 @@ import IntermediateQuiz from "./components/Quiz/IntermediateQuiz";
 import UserManagement from "./Pages/UserManagement";
 import Login from "./components/SignUpLogin/Login";
 import SignUp from "./components/SignUpLogin/SignUp";
-import Profile from "./components/UserProfile/Profile";
-import UserAccount from "./components/UserProfile/UserAccount";
 import AdminHome from "./Pages/adminPages/AdminHome";
+import AdminProfile from "./components/Profile/AdminProfile";
+import UserProfile from "./components/Profile/UserProfile";
 
 const Loading = () => {
   return <>Loading...</>;
@@ -70,8 +70,8 @@ function App() {
           <Route path="/signUP" element={<SignUp />}></Route>
 
           {/* Routing to profiles of users */}
-          <Route path="/profile" element={<Profile />}></Route>
-          <Route path="/myaccount" element={<UserAccount />}></Route>
+          <Route path="/adminprofile" element={<AdminProfile />}></Route>
+          <Route path="/userprofile" element={<UserProfile />}></Route>
         </Routes>
       </BrowserRouter>
     </Suspense>
